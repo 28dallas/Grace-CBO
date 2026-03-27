@@ -115,12 +115,12 @@ textarea {
 }
 
 .logo-image {
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.7);
-  padding: 0.35rem;
+  padding: 0.15rem;
   box-shadow: var(--shadow-soft);
 }
 
