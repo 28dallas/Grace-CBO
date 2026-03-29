@@ -43,6 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (backToTop) {
+    backToTop.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
   if (revealItems.length) {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
