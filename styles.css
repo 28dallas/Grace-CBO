@@ -878,6 +878,41 @@ textarea {
   color: rgba(236, 244, 239, 0.68);
 }
 
+.developer-credit {
+  width: fit-content;
+  margin: 0.85rem auto 0;
+  padding: 0.45rem 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(236, 244, 239, 0.82);
+  font-size: 0.88rem;
+}
+
+.developer-label {
+  color: rgba(236, 244, 239, 0.58);
+}
+
+.developer-credit strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.developer-credit a {
+  color: rgba(236, 244, 239, 0.88);
+  text-decoration: none;
+}
+
+.developer-credit a:hover,
+.developer-credit a:focus-visible {
+  color: #fff;
+}
+
 .back-to-top {
   position: fixed;
   right: 1.2rem;
@@ -1055,5 +1090,11 @@ textarea {
     height: 52px;
     right: 1rem;
     bottom: 4.7rem;
+  }
+
+  .developer-credit {
+    width: min(100%, 360px);
+    padding: 0.45rem 0.7rem;
+    border-radius: 18px;
   }
 }
