@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".main-nav a");
   const backToTop = document.getElementById("back-to-top");
   const year = document.getElementById("year");
+  const siteHeader = document.querySelector(".site-header");
+  const siteFooter = document.querySelector(".site-footer");
   const counters = document.querySelectorAll(".count");
   const revealItems = document.querySelectorAll("[data-reveal]");
   const forms = [
@@ -123,7 +125,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const sectionIds = ["about", "programs", "impact", "governance", "stories", "faq", "contact"];
+  if (siteHeader && siteFooter) {
+    const footerObserver = new IntersectionObserver(
+      ([entry]) => {
+        siteHeader.classList.toggle("header-hidden", entry.isIntersecting);
+      },
+      {
+        threshold: 0.08,
+      }
+    );
+
+    footerObserver.observe(siteFooter);
+  }
+
+  const sectionIds = ["about", "programs", "impact", "stories", "faq", "contact"];
   const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter(Boolean);
